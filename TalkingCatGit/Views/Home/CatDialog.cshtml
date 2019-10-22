@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Диалог с @if (ViewBag.User != null)
+    {@ViewBag.User.SurName @ViewBag.User.Name @ViewBag.User.SecondName}</title>
+</head>
+<body>
+    <div>
+        @if (ViewBag.User != null)
+        {
+        <h3>Диалог с @ViewBag.User.SurName @ViewBag.User.Name @ViewBag.User.SecondName</h3>
+        }
+        <table>
+            <tr>
+                <td><p>Сообщение</p></td>
+                <td><p>Дата</p></td>
+                <td><p>Автор</p></td>
+                <td></td>
+            </tr>
+            @if (ViewBag.UserMessages != null)
+            {
+                foreach (var b in ViewBag.UserMessages)
+                {
+                    <tr>
+                        <td><p>@b.Message</p></td>
+                        <td><p>@b.DateMessage</p></td>
+                        <td><p><a href="/Home/UserCat/b.IdAuthorMessage">Страница автора</a></p></td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkingCatGit", "TalkingCatGit\TalkingCatGit.csproj", "{ABAC5BE5-A9D6-4B86-9569-3CC245561823}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABAC5BE5-A9D6-4B86-9569-3CC245561823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAC5BE5-A9D6-4B86-9569-3CC245561823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAC5BE5-A9D6-4B86-9569-3CC245561823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAC5BE5-A9D6-4B86-9569-3CC245561823}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA80AEA5-0F9B-423B-BE71-7120CA681A7F}
+	EndGlobalSection
+EndGlobal

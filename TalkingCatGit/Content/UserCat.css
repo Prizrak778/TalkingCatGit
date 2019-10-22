@@ -1,0 +1,144 @@
+﻿.grid-container {
+    display: grid;
+    grid-template-columns: auto 250px 230px 550px auto
+    0px auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "leftSpace Menu leftColumn rightColumn RightSpace";
+}
+
+.leftSpace {
+    grid-area: leftSpace;
+}
+
+.Menu {
+    grid-area: Menu;
+    color: #285473;
+}
+.Menu a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.Menu a:hover {
+    background-color: rgba(70,130,180,0.1);
+}
+.Menu a:visited {
+    color: #285473;
+}
+
+.leftColumn {
+    grid-area: leftColumn;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 5px;
+    padding: 20px;
+}
+
+.leftColumn img {
+    width: 180px;
+}
+
+.rightColumn {
+    grid-area: rightColumn;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 30px 20px 35px 35px 35px 35px;
+    grid-template-areas: "txtName txtName txtOnline" "txtStatus txtStatus txtStatus" "lblBirthday txtBirthday ." "lblCurrentLocation txtCurrentLocation ." "lblLanguage txtLanguage ." "lblAboutMe txtAboutMe .";
+}
+
+.txtOnline {
+    grid-area: txtOnline;
+    font-size: 13px;
+    color: gray;
+}
+
+.txtName {
+    grid-area: txtName;
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 400;
+    margin: -1px 0 -1px -1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1px;
+}
+
+.txtStatus {
+    grid-area: txtStatus;
+    border-bottom: 1px solid gray;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+
+.lblBirthday {
+    grid-area: lblBirthday;
+    font-size: 13px;
+    color: gray;
+    padding: 5px;
+    padding: 5px;
+}
+
+.txtBirthday {
+    grid-area: txtBirthday;
+    font-size: 13px;
+    color: #285473;
+    padding: 5px;
+}
+
+.lblCurrentLocation {
+    grid-area: lblCurrentLocation;
+    font-size: 13px;
+    color: gray;
+    padding: 5px;
+}
+
+.txtCurrentLocation {
+    grid-area: txtCurrentLocation;
+    font-size: 13px;
+    color: #285473;
+    padding: 5px;
+}
+
+.lblLanguage {
+    grid-area: lblLanguage;
+    font-size: 13px;
+    color: gray;
+    padding: 5px;
+}
+
+.txtLanguage {
+    grid-area: txtLanguage;
+    font-size: 13px;
+    color: #285473;
+    padding: 5px;
+}
+
+.lblAboutMe {
+    grid-area: lblAboutMe;
+    font-size: 13px;
+    color: gray;
+    padding: 5px;
+}
+
+.txtAboutMe {
+    grid-area: txtAboutMe;
+    font-size: 13px;
+    color: #285473;
+    padding: 5px;
+}
+
+.RightSpace {
+    grid-area: RightSpace;
+}
+
+body {
+    background-color: #edeef0;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,Noto Sans Armenian,Noto Sans Bengali,Noto Sans Cherokee,Noto Sans Devanagari,Noto Sans Ethiopic,Noto Sans Georgian,Noto Sans Hebrew,Noto Sans Kannada,Noto Sans Khmer,Noto Sans Lao,Noto Sans Osmanya,Noto Sans Tamil,Noto Sans Telugu,Noto Sans Thai,sans-serif;
+}

@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <title>Пользователь @if(ViewBag.User != null){ @ViewBag.User.SurName @ViewBag.User.Name @ViewBag.User.SecondName}</title>
+    <link href="@Url.Content("~/Content/UserCat.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="grid-container">
+        <div class="leftSpace"></div>
+        <div class="Menu">
+            <table>
+                <tr>
+                    <td><p>Пользователь</p></td>
+                    <td><p>Диалог</p></td>
+                    <td></td>
+                </tr>
+                @foreach (var b in ViewBag.Dialog)
+                {
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="/User/UserCat/@if (b.User1Id == ViewBag.User.Id) { @b.User2Id; } else { @b.User1Id; }">
+                                    Страница пользователя
+                                    @if (b.User1.Id == ViewBag.User.Id)
+                                    {
+                                        @b.User2.Name @b.User2.SurName
+                                    }
+                                    else
+                                    {
+                                        @b.User1.Name @b.User1.SurName
+                                    }
+                                </a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="/Dialog/CatDialog?id=@b.Id&idUser=@ViewBag.User.Id">
+                                    Диалог с
+                                    @if (b.User1.Id == ViewBag.User.Id)
+                                    {
+                                        @b.User2.Name 
+                                        @b.User2.SurName
+                                    }
+                                    else
+                                    {
+                                        @b.User1.Name 
+                                        @b.User1.SurName
+                                    }
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="leftColumn">
+            <img src="@ViewBag.Img" />
+        </div>
+        <div class="rightColumn">
+            @if (ViewBag.User != null)
+            {
+                <div class="txtOnline">@ViewBag.Online</div>
+                <div class="txtName">
+                    @ViewBag.User.SurName @ViewBag.User.Name @ViewBag.User.SecondName
+                </div>
+                <div class="txtStatus">
+                    @ViewBag.User.Status
+                </div>
+                <div class="lblBirthday">
+                    День рождения:
+                </div>
+                <div class="txtBirthday">
+                    @ViewBag.User.Birthday
+                </div>
+                <div class="lblCurrentLocation">
+                    Текущее месторасположение:
+                </div>
+                <div class="txtCurrentLocation">
+                    @ViewBag.User.CurrentCity @ViewBag.User.CurrentCountry
+                </div>
+                <div class="lblLanguage">
+                    Язык:
+                </div>
+                <div class="txtLanguage">
+                    @ViewBag.User.Language
+                </div>
+                <div class="lblAboutMe">
+                    Обо мне:
+                </div>
+                <div class="txtAboutMe">
+                    @ViewBag.User.AboutMe
+                </div>
+            }
+        </div>
+        <div class="RightSpace"></div>
+        <div class="RightColumnAlbum">
+            @if (ViewBag.MyImgs != null)
+            {
+                <div class="myPhotolbl">
+                    <div class="label"> Мои фотографии</div>
+                    <div class="textcontrol">@ViewBag.MyImgsCount</div>
+                </div>
+                foreach (var Img in ViewBag.MyImgs)
+                {
+                <div class="myPhoto">
+                    <img src="@Url.Content(Img.PathImg)" />
+                </div>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

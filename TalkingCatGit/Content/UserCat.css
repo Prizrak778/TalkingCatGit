@@ -1,9 +1,9 @@
 ﻿.grid-container {
     display: grid;
-    grid-template-columns: auto 250px 230px 550px auto
-    0px auto;
-    grid-template-rows: 1fr;
-    grid-template-areas: "leftSpace Menu leftColumn rightColumn RightSpace";
+    grid-template-columns: auto 250px 230px 550px auto 0px auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "leftSpace Menu leftColumn rightColumn RightSpace" ". . . RightColumnAlbum  .";
+    ;
 }
 
 .leftSpace {
@@ -138,7 +138,41 @@
     grid-area: RightSpace;
 }
 
+.RightColumnAlbum {
+    grid-area: RightColumnAlbum;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 5px;
+    padding: 20px;
+}
+
 body {
     background-color: #edeef0;
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,Noto Sans Armenian,Noto Sans Bengali,Noto Sans Cherokee,Noto Sans Devanagari,Noto Sans Ethiopic,Noto Sans Georgian,Noto Sans Hebrew,Noto Sans Kannada,Noto Sans Khmer,Noto Sans Lao,Noto Sans Osmanya,Noto Sans Tamil,Noto Sans Telugu,Noto Sans Thai,sans-serif;
+}
+
+.myPhoto
+{
+    display: inline-block;
+}
+.myPhoto img {
+    border-radius: 4px;
+    margin: 4px;
+    height: auto;
+    width: 123px;
+}
+.label {
+    display: inline-block;
+
+    font-size: 14px;
+}
+.textcontrol {
+    display: inline-block;
+    font-size: 14px;
+    color: gray;
+}
+.myPhotolbl
+{
+    margin-bottom: 6px;
 }

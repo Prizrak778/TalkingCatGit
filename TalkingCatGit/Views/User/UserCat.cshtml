@@ -21,43 +21,51 @@
                     <td><p>Диалог</p></td>
                     <td></td>
                 </tr>
-                @foreach (var b in ViewBag.Dialog)
+                @if (ViewBag.Dialog != null)
                 {
-                    <tr>
-                        <td>
-                            <p>
-                                <a href="/User/UserCat/@if (b.User1Id == ViewBag.User.Id) { @b.User2Id; } else { @b.User1Id; }">
-                                    Страница пользователя
-                                    @if (b.User1.Id == ViewBag.User.Id)
-                                    {
-                                        @b.User2.Name @b.User2.SurName
+                    foreach (var b in ViewBag.Dialog)
+                    {
+                        <tr>
+                            <td>
+                                <p>
+                                    <a href="/User/UserCat/@if (b.User1Id == ViewBag.User.Id)
+                                    { @b.User2Id;
                                     }
                                     else
-                                    {
-                                        @b.User1.Name @b.User1.SurName
-                                    }
-                                </a>
-                            </p>
-                        </td>
-                        <td>
-                            <p>
-                                <a href="/Dialog/CatDialog?id=@b.Id&idUser=@ViewBag.User.Id">
-                                    Диалог с
-                                    @if (b.User1.Id == ViewBag.User.Id)
-                                    {
-                                        @b.User2.Name 
-                                        @b.User2.SurName
-                                    }
-                                    else
-                                    {
-                                        @b.User1.Name 
-                                        @b.User1.SurName
-                                    }
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                }
+                                    { @b.User1Id;
+                                    }">
+                                        Страница пользователя
+                                        @if (b.User1.Id == ViewBag.User.Id)
+                                        {
+                                            @b.User2.Name @b.User2.SurName
+                                        }
+                                        else
+                                        {
+                                            @b.User1.Name @b.User1.SurName
+                                        }
+                                    </a>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <a href="/Dialog/CatDialog?id=@b.Id&idUser=@ViewBag.User.Id">
+                                        Диалог с
+                                        @if (b.User1.Id == ViewBag.User.Id)
+                                        {
+                                            @b.User2.Name
+                                            @b.User2.SurName
+                                        }
+                                        else
+                                        {
+                                            @b.User1.Name
+                                            @b.User1.SurName
+                                        }
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                    }
+                }   
             </table>
         </div>
         <div class="leftColumn">

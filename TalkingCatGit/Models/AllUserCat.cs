@@ -44,13 +44,22 @@ namespace TalkingCat.Models
 
         public DateTime? LastActivity { get; set; }
 
-        public int? ImgId { get; set; }
+        public int? AvatarImgId { get; set; }
 
         public ICollection<CatDialogue> CatDialogues { get; set; }
+
+        public ICollection<CatAlbum> CatAlbums { get; set; }
+
+        public ICollection<CatImg> CatImgs { get; set; }
+
+        public ICollection<UserCatMessage> UserCatMessages { get; set; }
 
         public AllUserCat()
         {
             CatDialogues = new List<CatDialogue>();
+            CatAlbums = new List<CatAlbum>();
+            CatImgs = new List<CatImg>();
+            UserCatMessages = new List<UserCatMessage>();
         }
     }
 }

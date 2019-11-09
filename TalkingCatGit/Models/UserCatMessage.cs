@@ -20,5 +20,7 @@ namespace TalkingCat.Models
 
         //Id Author Message
         public int AuthorMessageId { get; set; }
+
+        public AllUserCat AuthorMessage { get; set; }
     }
 }

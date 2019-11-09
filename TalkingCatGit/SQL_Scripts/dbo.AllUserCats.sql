@@ -11,7 +11,7 @@
     [Status]         NVARCHAR (MAX) NULL,
     [AboutMe]        NVARCHAR (MAX) NULL,
     [LastActivity]   DATETIME       NULL,
-    [ImgId]          INT            NULL,
+    [AvatarImgId]    INT            NULL,
     CONSTRAINT [PK_dbo.AllUserCats] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
